@@ -35,3 +35,8 @@ A Python implementation of a coffee shop domain model with customer ordering fun
    ```bash
    git clone https://github.com/your-username/coffee-shop-challenge.git
    cd coffee-shop-challenge
+
+### `Set up the environment:`
+bash
+pipenv install
+pipenv shell
