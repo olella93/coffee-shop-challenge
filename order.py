@@ -1,38 +1,16 @@
-class Customer:
-    def __init__(self, name):
-        self.name = name
-
-class Coffee:
-    def __init__(self, name):
-        self.name = name
-
 class Order:
-    def __init__(self, customer, coffee, price):
+    def __init__(self, customer: 'Customer', coffee: 'Coffee', price: float):
         self.customer = customer
         self.coffee = coffee
-        self.price = price  
+        self.price = price
     
-    @property
-    def price(self):
-        return self._price
-    
-    @price.setter
-    def price(self, value):
-        if not isinstance(value, float):
-            raise TypeError("Price must be a float")
-        if not 1.0 <= value <= 10.0:
-            raise ValueError("Price must be between 1.0 and 10.0")
-        if hasattr(self, '_price'):
-            raise AttributeError("Price cannot be changed after creation")
-        self._price = value
-
     @property
     def customer(self):
         return self._customer
     
     @customer.setter
-    def customer(self, value):
-        if not isinstance(value, Customer):
+    def customer(self, value: 'Customer'):
+        if not isinstance(value, Customer):  # Python resolves 'Customer' at runtime
             raise TypeError("Customer must be a Customer instance")
         self._customer = value
 
@@ -41,7 +19,8 @@ class Order:
         return self._coffee
     
     @coffee.setter
-    def coffee(self, value):
+    def coffee(self, value: 'Coffee'):
         if not isinstance(value, Coffee):
             raise TypeError("Coffee must be a Coffee instance")
         self._coffee = value
+
