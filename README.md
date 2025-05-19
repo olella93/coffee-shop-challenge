@@ -70,3 +70,20 @@ coffee-shop-challenge/
     ├── coffee_test.py
     
     └── order_test.py
+
+
+### `Key Features`
+
+✔️ Strict type validation
+✔️ Immutable properties where required
+✔️ Circular import resolution
+✔️ Single source of truth (Order.all)
+✔️ Relationship navigation methods
+
+### `Bonus`
+
+Includes optional most_aficionado() classmethod to identify top customers by spending.
+
+### `Author`
+
+Richard Olella
