@@ -1,6 +1,14 @@
+class Order:
+    all = []
+
+    def __init__(self, coffee, customer):
+        self.coffee = coffee
+        self.customer = customer
+        Order.all.append(self)
+
 class Coffee:
     def __init__(self, name):
-        self.name = name  
+        self.name = name
     
     @property
     def name(self):
@@ -15,3 +23,9 @@ class Coffee:
         if len(value) < 3:
             raise ValueError("Name must be at least 3 characters")
         self._name = value
+
+    def orders(self):
+        return [order for order in Order.all if order.coffee == self]
+    
+    def customers(self):
+        return list({order.customer for order in self.orders()})
