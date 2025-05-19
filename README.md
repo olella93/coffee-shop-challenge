@@ -75,9 +75,13 @@ coffee-shop-challenge/
 ### `Key Features`
 
 ✔️ Strict type validation
+
 ✔️ Immutable properties where required
+
 ✔️ Circular import resolution
+
 ✔️ Single source of truth (Order.all)
+
 ✔️ Relationship navigation methods
 
 ### `Bonus`
