@@ -31,16 +31,11 @@ class Customer:
         if not Order.all:
             return None
             
-        # Dictionary 
         spending = {}
-        
         for order in Order.all:
             if order.coffee == coffee:
                 if order.customer not in spending:
                     spending[order.customer] = 0
                 spending[order.customer] += order.price
         
-        if not spending:
-            return None
-            
-        return max(spending.items(), key=lambda item: item[1])[0]
+        return max(spending.items(), key=lambda item: item[1])[0] if spending else None
