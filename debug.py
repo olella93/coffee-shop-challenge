@@ -1,14 +1,19 @@
-# Test in debug.py
 from customer import Customer
 from coffee import Coffee
 from order import Order
 
-# Valid cases
+# Create instances
 customer = Customer("Alice")
-coffee = Coffee("Latte")
-order = Order(customer, coffee, 5.0)
+coffee1 = Coffee("Latte")
+coffee2 = Coffee("Cappuccino")
 
-print(customer.name)  # "Alice"
-print(coffee.name)    # "Latte"
-print(order.price)    # 5.0
+# Create orders
+order1 = Order(customer, coffee1, 4.5)
+order2 = Order(customer, coffee2, 5.0)
 
+# Test relationships
+print(f"{customer.name}'s orders: {[o.coffee.name for o in customer.orders()]}")
+# Output: ["Latte", "Cappuccino"]
+
+print(f"{coffee1.name}'s customers: {[c.name for c in coffee1.customers()]}")
+# Output: ["Alice"]

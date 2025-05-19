@@ -5,7 +5,7 @@ class Order:
         self.customer = customer
         self.coffee = coffee
         self.price = price
-        Order.all.append(self)  # Track new orders
+        Order.all.append(self) 
     
     @property
     def price(self):
