@@ -39,4 +39,5 @@ A Python implementation of a coffee shop domain model with customer ordering fun
 ### `Set up the environment:`
 bash
 pipenv install
+
 pipenv shell
