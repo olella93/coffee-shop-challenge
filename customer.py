@@ -24,3 +24,23 @@ class Customer:
     def create_order(self, coffee, price):
         from order import Order
         return Order(self, coffee, price)
+
+    @classmethod
+    def most_aficionado(cls, coffee):
+        from order import Order
+        if not Order.all:
+            return None
+            
+        # Dictionary 
+        spending = {}
+        
+        for order in Order.all:
+            if order.coffee == coffee:
+                if order.customer not in spending:
+                    spending[order.customer] = 0
+                spending[order.customer] += order.price
+        
+        if not spending:
+            return None
+            
+        return max(spending.items(), key=lambda item: item[1])[0]
