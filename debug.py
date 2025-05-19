@@ -1,13 +1,16 @@
 from customer import Customer
 from coffee import Coffee
 
-customer = Customer("Alice")
-coffee = Coffee("Latte")
+# Create instances
+alice = Customer("Alice")
+bob = Customer("Bob")
+latte = Coffee("Latte")
 
 # Create orders
-order1 = customer.create_order(coffee, 4.5)
-order2 = customer.create_order(coffee, 5.0)
+alice.create_order(latte, 5.0)  # Alice spends $5
+alice.create_order(latte, 3.0)  # Alice spends $3 more (total $8)
+bob.create_order(latte, 6.0)    # Bob spends $6
 
-print(f"Total orders for {coffee.name}: {coffee.num_orders()}")  # 2
-print(f"Average price: ${coffee.average_price():.2f}")          # $4.75
-print(f"First order price: ${order1.price}")                   # $4.5
+# Find top spender
+top_spender = Customer.most_aficionado(latte)
+print(f"Biggest {latte.name} fan:", top_spender.name)  # "Alice"

@@ -21,4 +21,4 @@ class Coffee:
         return [order for order in Order.all if order.coffee == self]
     
     def customers(self):
-        return list({order.customer for order in self.orders()})av
+        return list({order.customer for order in self.orders()})
