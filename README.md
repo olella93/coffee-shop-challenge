@@ -93,11 +93,3 @@ Includes optional most_aficionado() classmethod to identify top customers by spe
 Richard Olella
 
 
-This README includes:
-1. Clear model documentation
-2. Setup instructions
-3. Testing guidance
-4. Project structure overview
-5. Key features list
-6. Bonus feature mention
-
