@@ -101,8 +101,3 @@ This README includes:
 5. Key features list
 6. Bonus feature mention
 
-You can customize the author information and GitHub URLs as needed. Would you like me to add any additional sections like:
-- Contribution guidelines?
-- License information?
-- More detailed usage examples?
-- Diagram of the relationships?
