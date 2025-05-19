@@ -55,11 +55,18 @@ python debug.py
 
 coffee-shop-challenge/
 ├── Pipfile
+
 ├── debug.py            # Test script
+
 ├── customer.py         # Customer model
+
 ├── coffee.py           # Coffee model
+
 ├── order.py            # Order model
+
 └── tests/              # Test directory (optional)
     ├── customer_test.py
+    
     ├── coffee_test.py
+    
     └── order_test.py
