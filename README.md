@@ -41,3 +41,12 @@ bash
 pipenv install
 
 pipenv shell
+
+
+### `Testing`
+
+**Run the test script**:
+
+bash
+
+python debug.py
