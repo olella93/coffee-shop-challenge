@@ -1,17 +1,13 @@
 from customer import Customer
 from coffee import Coffee
-from order import Order
 
-# Creating instances
 customer = Customer("Alice")
 coffee = Coffee("Latte")
-order = Order(customer, coffee, 5.0)
 
-# Testing relationships with readable output
-print(f"{customer.name}'s orders:")
-for order in customer.orders():
-    print(f"- {order.coffee.name} (${order.price})")
+# Create orders
+order1 = customer.create_order(coffee, 4.5)
+order2 = customer.create_order(coffee, 5.0)
 
-print(f"\n{coffee.name}'s customers:")
-for customer in coffee.customers():
-    print(f"- {customer.name}")
+print(f"Total orders for {coffee.name}: {coffee.num_orders()}")  # 2
+print(f"Average price: ${coffee.average_price():.2f}")          # $4.75
+print(f"First order price: ${order1.price}")                   # $4.5
