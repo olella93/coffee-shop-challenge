@@ -2,18 +2,16 @@ from customer import Customer
 from coffee import Coffee
 from order import Order
 
-# Create instances
+# Creating instances
 customer = Customer("Alice")
-coffee1 = Coffee("Latte")
-coffee2 = Coffee("Cappuccino")
+coffee = Coffee("Latte")
+order = Order(customer, coffee, 5.0)
 
-# Create orders
-order1 = Order(customer, coffee1, 4.5)
-order2 = Order(customer, coffee2, 5.0)
+# Testing relationships with readable output
+print(f"{customer.name}'s orders:")
+for order in customer.orders():
+    print(f"- {order.coffee.name} (${order.price})")
 
-# Test relationships
-print(f"{customer.name}'s orders: {[o.coffee.name for o in customer.orders()]}")
-# Output: ["Latte", "Cappuccino"]
-
-print(f"{coffee1.name}'s customers: {[c.name for c in coffee1.customers()]}")
-# Output: ["Alice"]
+print(f"\n{coffee.name}'s customers:")
+for customer in coffee.customers():
+    print(f"- {customer.name}")
