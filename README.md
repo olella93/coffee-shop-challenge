@@ -91,3 +91,18 @@ Includes optional most_aficionado() classmethod to identify top customers by spe
 ### `Author`
 
 Richard Olella
+
+
+This README includes:
+1. Clear model documentation
+2. Setup instructions
+3. Testing guidance
+4. Project structure overview
+5. Key features list
+6. Bonus feature mention
+
+You can customize the author information and GitHub URLs as needed. Would you like me to add any additional sections like:
+- Contribution guidelines?
+- License information?
+- More detailed usage examples?
+- Diagram of the relationships?
